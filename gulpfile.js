@@ -6,7 +6,7 @@ var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('scripts', function() {
-    return gulp.src(['js/scripts.js', 'js/analytics.js'])
+    return gulp.src('js/scripts.js')
         .pipe(plumber(plumber({
             errorHandler: function (err) {
                 console.log(err);

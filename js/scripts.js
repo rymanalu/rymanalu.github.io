@@ -1,7 +1,7 @@
 /*!
     Title: Dev Portfolio Template
-    Version: 1.1.1
-    Last Change: 03/19/17
+    Version: 1.1.3
+    Last Change: 03/25/17
     Author: Ryan Fitzgerald
     Repo: https://github.com/RyanFitzgerald/devportfolio-template
     Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
@@ -17,13 +17,17 @@
 
     // Animate to section when nav is clicked
     $('header a').click(function(e) {
+
+        // Treat as normal link if no-scroll class
+        if ($(this).hasClass('no-scroll')) return;
+
         e.preventDefault();
         var heading = $(this).attr('href');
         var scrollDistance = $(heading).offset().top;
 
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
-        }, 700);
+        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
 
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
