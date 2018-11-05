@@ -48,7 +48,7 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Roni Yusuf</h1>
-            <h2>Web Developer</h2>
+            <h2>Software Developer</h2>
             <a href="/Resume.pdf" class="btn-rounded-white" target="_blank">Download Resume</a>
         </div>
         <!-- End #lead-content -->
@@ -86,9 +86,14 @@
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="August 2017 – Present">
+            <div data-date="November 2018 – Present">
+                <h3>PT. AiChat Teknologi Indonesia</h3>
+                <h4>Back End Developer</h4>
+            </div>
+
+            <div data-date="August 2017 – October 2018">
                 <h3>PT. Masskredit Pasifica Raya</h3>
-                <h4>Lead Backend Developer</h4>
+                <h4>Lead Back End Developer</h4>
             </div>
 
             <div data-date="January 2016 – June 2017">
@@ -209,10 +214,12 @@
             <li>Bootstrap</li>
             <li>JQuery</li>
             <li>VueJS</li>
+            <li>ReactJS</li>
             <li>CodeIgniter</li>
             <li>ExpressJS</li>
             <li>Laravel</li>
             <li>Play</li>
+            <li>React Native</li>
             <li>Git</li>
             <li>SOLID Principles</li>
             <li>Design Patterns</li>
@@ -239,7 +246,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2018 Roni Yusuf
+                        Copyright &copy; <span id="currentYear"></span> Roni Yusuf
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -274,6 +281,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/analytics.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#currentYear').append((new Date()).getFullYear());
+        });
+    </script>
 </body>
 
 </html>
