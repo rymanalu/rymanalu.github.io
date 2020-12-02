@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/loketh/static/css/main.cfda8877.chunk.css",
+    "main.js": "/loketh/static/js/main.e15e1fb7.chunk.js",
+    "main.js.map": "/loketh/static/js/main.e15e1fb7.chunk.js.map",
+    "runtime-main.js": "/loketh/static/js/runtime-main.4afb707a.js",
+    "runtime-main.js.map": "/loketh/static/js/runtime-main.4afb707a.js.map",
+    "static/css/2.43311e01.chunk.css": "/loketh/static/css/2.43311e01.chunk.css",
+    "static/js/2.860ebf86.chunk.js": "/loketh/static/js/2.860ebf86.chunk.js",
+    "static/js/2.860ebf86.chunk.js.map": "/loketh/static/js/2.860ebf86.chunk.js.map",
+    "index.html": "/loketh/index.html",
+    "precache-manifest.837c783b4dc9dad88428e8cc21e20843.js": "/loketh/precache-manifest.837c783b4dc9dad88428e8cc21e20843.js",
+    "service-worker.js": "/loketh/service-worker.js",
+    "static/css/2.43311e01.chunk.css.map": "/loketh/static/css/2.43311e01.chunk.css.map",
+    "static/css/main.cfda8877.chunk.css.map": "/loketh/static/css/main.cfda8877.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4afb707a.js",
+    "static/css/2.43311e01.chunk.css",
+    "static/js/2.860ebf86.chunk.js",
+    "static/css/main.cfda8877.chunk.css",
+    "static/js/main.e15e1fb7.chunk.js"
+  ]
+}
