@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a34d54f3802d619de30a9e3cf0ba4aab",
+    "revision": "761f0e188ab452a0c6db5c0c4794b6a6",
     "url": "/loketh/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/loketh/static/css/2.43311e01.chunk.css"
   },
   {
-    "revision": "be38e5bea5c126b8371d",
+    "revision": "8f26357f54dc4fa88ea0",
     "url": "/loketh/static/css/main.cfda8877.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/loketh/static/js/2.816b9c55.chunk.js"
   },
   {
-    "revision": "be38e5bea5c126b8371d",
-    "url": "/loketh/static/js/main.2187c181.chunk.js"
+    "revision": "8f26357f54dc4fa88ea0",
+    "url": "/loketh/static/js/main.0451989c.chunk.js"
   },
   {
     "revision": "4909019be8400947e491",
