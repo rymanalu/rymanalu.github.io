@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/loketh/static/css/main.cfda8877.chunk.css",
-    "main.js": "/loketh/static/js/main.e5b3f706.chunk.js",
-    "main.js.map": "/loketh/static/js/main.e5b3f706.chunk.js.map",
+    "main.js": "/loketh/static/js/main.4974f86d.chunk.js",
+    "main.js.map": "/loketh/static/js/main.4974f86d.chunk.js.map",
     "runtime-main.js": "/loketh/static/js/runtime-main.4afb707a.js",
     "runtime-main.js.map": "/loketh/static/js/runtime-main.4afb707a.js.map",
     "static/css/2.43311e01.chunk.css": "/loketh/static/css/2.43311e01.chunk.css",
-    "static/js/2.816b9c55.chunk.js": "/loketh/static/js/2.816b9c55.chunk.js",
-    "static/js/2.816b9c55.chunk.js.map": "/loketh/static/js/2.816b9c55.chunk.js.map",
+    "static/js/2.9f646acc.chunk.js": "/loketh/static/js/2.9f646acc.chunk.js",
+    "static/js/2.9f646acc.chunk.js.map": "/loketh/static/js/2.9f646acc.chunk.js.map",
     "index.html": "/loketh/index.html",
-    "precache-manifest.e876bebd847f2134a35be11770fd715e.js": "/loketh/precache-manifest.e876bebd847f2134a35be11770fd715e.js",
+    "precache-manifest.335c0ef48f5e79b0faf6dccda43e8b73.js": "/loketh/precache-manifest.335c0ef48f5e79b0faf6dccda43e8b73.js",
     "service-worker.js": "/loketh/service-worker.js",
     "static/css/2.43311e01.chunk.css.map": "/loketh/static/css/2.43311e01.chunk.css.map",
     "static/css/main.cfda8877.chunk.css.map": "/loketh/static/css/main.cfda8877.chunk.css.map"
@@ -17,8 +17,8 @@
   "entrypoints": [
     "static/js/runtime-main.4afb707a.js",
     "static/css/2.43311e01.chunk.css",
-    "static/js/2.816b9c55.chunk.js",
+    "static/js/2.9f646acc.chunk.js",
     "static/css/main.cfda8877.chunk.css",
-    "static/js/main.e5b3f706.chunk.js"
+    "static/js/main.4974f86d.chunk.js"
   ]
 }
