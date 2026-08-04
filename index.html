@@ -1,364 +1,230 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Roni Yusuf - Full Stack Engineer</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-  </head>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Roni Yusuf — Senior Backend Engineer, Loan Origination &amp; Credit Decisioning</title>
+<meta name="description" content="Senior Backend Engineer in Jakarta with 12+ years in lending. Builds and owns the loan origination scoring and underwriting systems at BFI Finance. Java, Spring Boot, Go, PostgreSQL, AWS." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Roni Yusuf — Senior Backend Engineer" />
+<meta property="og:description" content="12+ years in lending. Owns the loan origination scoring engine and underwriting platform at BFI Finance, Jakarta. Java, Spring Boot, Go, PostgreSQL, Redis, AWS." />
+<meta property="og:url" content="https://rymanalu.github.io/" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #FFFFFF; color: #0F1518; font-family: 'Libre Franklin', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.62; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  * { box-sizing: border-box; }
+  h1, h2, h3, p, ul, li, figure { margin: 0; padding: 0; }
+  ul { list-style: none; }
+  a { color: #14454C; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: #14454C; transition: text-decoration-thickness 140ms ease; }
+  a:hover { color: #14454C; text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 2px solid #14454C; outline-offset: 3px; border-radius: 1px; }
+  ::selection { background: #14454C; color: #FFFFFF; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main>
+<section style="padding: clamp(28px,6vw,56px) clamp(20px,5vw,72px) clamp(48px,7vw,72px); min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; gap: clamp(48px,8vh,96px);">
+  <div style="max-width: 1120px; margin: 0 auto; width: 100%;">
+    <p style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #5B6569;">Jakarta, Indonesia</p>
+  </div>
 
-  <body>
-    <div id="mobile-menu-open" class="shadow-large">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+  <div style="max-width: 1120px; margin: 0 auto; width: 100%;">
+    <h1 style="font-family: 'Bitter', Georgia, serif; font-weight: 600; font-size: clamp(52px,10.5vw,124px); line-height: 0.9; letter-spacing: -0.035em; margin-bottom: clamp(28px,4vw,44px);">Roni Yusuf</h1>
+    <p style="font-family: 'Bitter', Georgia, serif; font-weight: 400; font-size: clamp(23px,3.3vw,40px); line-height: 1.3; letter-spacing: -0.014em; max-width: 30ch;">Senior Backend Engineer building <span style="border-bottom: 3px solid #14454C; padding-bottom: 1px;">loan origination and credit decisioning</span> systems in Java and Spring Boot.</p>
+  </div>
+
+  <div style="max-width: 1120px; margin: 0 auto; width: 100%;">
+    <div style="border-top: 1px solid #0F1518; padding-top: 18px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 22px; font-size: 14px; letter-spacing: 0.01em; color: #0F1518;">
+      <span style="font-weight: 500;">12+ years</span>
+      <span aria-hidden="true" style="width: 1px; height: 13px; background: #DCE0DF;"></span>
+      <span>Java · Spring Boot · Go</span>
+      <span aria-hidden="true" style="width: 1px; height: 13px; background: #DCE0DF;"></span>
+      <span>PostgreSQL · Redis · AWS</span>
+      <span aria-hidden="true" style="width: 1px; height: 13px; background: #DCE0DF;"></span>
+      <span>Jakarta, Indonesia</span>
     </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-      <div id="mobile-menu-close">
-        <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-      </div>
-      <ul id="menu" class="shadow">
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-        <li>
-          <a href="#education">Education</a>
-        </li>
-        <li>
-          <a href="#certifications">Certifications</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </header>
-    <!-- End header -->
-
-    <div id="lead">
-      <div id="lead-content">
-        <h1>Roni Yusuf</h1>
-        <h2>Full Stack Engineer</h2>
-        <a href="/Roni Yusuf.pdf" class="btn-rounded-white" target="_blank"
-          >Download Resume</a
-        >
-      </div>
-      <!-- End #lead-content -->
-
-      <div id="lead-overlay"></div>
-
-      <div id="lead-down">
-        <span>
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-        </span>
-      </div>
-      <!-- End #lead-down -->
+    <div style="margin-top: 26px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 30px; font-size: 15px;">
+      <a href="Roni%20Yusuf.pdf" download="Roni_Yusuf.pdf" style="font-weight: 600; text-decoration-thickness: 2px; text-decoration-color: #14454C;">Download resume (PDF)</a>
+      <a href="https://github.com/rymanalu">github.com/rymanalu</a>
+      <a href="https://www.linkedin.com/in/roni-yusuf">linkedin.com/in/roni-yusuf</a>
+      <a href="mailto:rymanalu@gmail.com">rymanalu@gmail.com</a>
     </div>
-    <!-- End #lead -->
+  </div>
+</section>
 
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2 class="heading">About Me</h2>
+<section style="padding: clamp(56px,8vw,104px) clamp(20px,5vw,72px);">
+  <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: flex-start;">
+    <h2 style="flex: 0 1 170px; min-width: 140px; font-family: 'Libre Franklin', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #5B6569; padding-top: 8px;">About</h2>
+    <div style="flex: 1 1 460px; max-width: 68ch; display: flex; flex-direction: column; gap: 22px; font-size: clamp(17px,1.35vw,19px);">
+      <p>I work on lending systems. At BFI Finance, one of Indonesia's largest listed multi-finance companies, I build and own the scoring and underwriting behind loan origination — mostly Java and Spring Boot, with Go alongside. A loan application comes in, data comes back from ten external providers, and the system produces the assessment that a credit analyst or a manager with approval authority acts on.</p>
+      <p>Twelve years of this, all of it in lending, credit, and financial services: consumer credit at Kredivo, conversational AI at AiChat, and lending platforms at smaller Indonesian companies before that. Most of my time goes to the parts that carry money — thresholds, staged workflows, and what a service does when an upstream provider is slow or returns something wrong.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding: clamp(24px,4vw,48px) clamp(20px,5vw,72px) clamp(56px,8vw,104px);">
+  <div style="max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: flex-start; border-top: 1px solid #0F1518; padding-top: 18px;">
+      <h2 style="flex: 0 1 170px; min-width: 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #5B6569;">Experience</h2>
+      <div style="flex: 1 1 460px;"></div>
+    </div>
+
+    <article style="display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: flex-start; padding-top: clamp(40px,5vw,64px);">
+      <div style="flex: 0 1 170px; min-width: 140px;">
+        <p style="font-family: 'Bitter', Georgia, serif; font-size: 15px; font-weight: 500; letter-spacing: -0.01em;">Dec 2022 – Present</p>
+        <p style="font-size: 13px; color: #5B6569;">Jakarta</p>
+      </div>
+      <div style="flex: 1 1 460px; border-left: 1px solid #DCE0DF; padding-left: clamp(20px,2.4vw,34px); position: relative;">
+        <span aria-hidden="true" style="position: absolute; left: -4px; top: 11px; width: 7px; height: 7px; background: #14454C;"></span>
+        <h3 style="font-family: 'Bitter', Georgia, serif; font-weight: 600; font-size: clamp(24px,2.5vw,31px); line-height: 1.15; letter-spacing: -0.02em;">PT BFI Finance Indonesia, Tbk</h3>
+        <p style="margin-top: 8px; font-size: 15px; color: #5B6569;"><span style="color: #0F1518; font-weight: 500;">Senior Backend Engineer</span> (Nov 2024 – Present) · Backend Engineer (Dec 2022 – Oct 2024)</p>
+        <div style="margin-top: 26px; display: flex; flex-wrap: wrap; gap: 20px 44px; border-top: 1px solid #DCE0DF; border-bottom: 1px solid #DCE0DF; padding: 18px 0;">
+          <p style="display: flex; align-items: baseline; gap: 9px;"><span style="font-family: 'Bitter', Georgia, serif; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -0.02em;">5</span><span style="font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase; color: #5B6569;">stage workflow</span></p>
+          <p style="display: flex; align-items: baseline; gap: 9px;"><span style="font-family: 'Bitter', Georgia, serif; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -0.02em;">10</span><span style="font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase; color: #5B6569;">data providers</span></p>
+          <p style="display: flex; align-items: baseline; gap: 9px;"><span style="font-family: 'Bitter', Georgia, serif; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -0.02em;">6</span><span style="font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase; color: #5B6569;">financing products</span></p>
+        </div>
+        <ul style="margin-top: 22px; display: flex; flex-direction: column; gap: 15px; max-width: 66ch;">
+          <li>Built the underwriting platform from scratch, design through production rollout. Live since Dec 2023, used by credit analysts and the branch and product managers who hold approval authority on incoming loan applications.</li>
+          <li>Owns the loan origination scoring engine end-to-end since Jan 2023: a 5-stage workflow integrating 10 external data providers to produce credit assessments across 6 financing products.</li>
+          <li>Designs and builds backend services for origination and credit decisioning in Java and Spring Boot, with Go alongside, in a regulated, publicly listed multi-finance environment.</li>
+          <li>Reviews backend changes across the squad and mentors engineers on the origination Java and Go codebases.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article style="display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: flex-start; padding-top: clamp(40px,5vw,64px);">
+      <div style="flex: 0 1 170px; min-width: 140px;">
+        <p style="font-family: 'Bitter', Georgia, serif; font-size: 15px; font-weight: 500; letter-spacing: -0.01em;">Mar 2021 – Dec 2022</p>
+        <p style="font-size: 13px; color: #5B6569;">Jakarta</p>
+      </div>
+      <div style="flex: 1 1 460px; border-left: 1px solid #DCE0DF; padding-left: clamp(20px,2.4vw,34px); position: relative;">
+        <span aria-hidden="true" style="position: absolute; left: -4px; top: 11px; width: 7px; height: 7px; background: #14454C;"></span>
+        <h3 style="font-family: 'Bitter', Georgia, serif; font-weight: 600; font-size: clamp(24px,2.5vw,31px); line-height: 1.15; letter-spacing: -0.02em;">FinAccel Pte Ltd (Kredivo)</h3>
+        <p style="margin-top: 8px; font-size: 15px; color: #0F1518; font-weight: 500;">Full Stack Engineer</p>
+        <ul style="margin-top: 22px; display: flex; flex-direction: column; gap: 15px; max-width: 66ch;">
+          <li>Built TREX, an internal transaction reconciliation engine reconciling transactions and activity data across Kredivo's consumer credit platform, replacing manual reconciliation work.</li>
+          <li>Developed internal tooling for automation and credit-risk workflows, working across engineering and risk.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article style="display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: flex-start; padding-top: clamp(40px,5vw,64px);">
+      <div style="flex: 0 1 170px; min-width: 140px;">
+        <p style="font-family: 'Bitter', Georgia, serif; font-size: 15px; font-weight: 500; letter-spacing: -0.01em;">Nov 2018 – Mar 2021</p>
+        <p style="font-size: 13px; color: #5B6569;">Jakarta</p>
+      </div>
+      <div style="flex: 1 1 460px; border-left: 1px solid #DCE0DF; padding-left: clamp(20px,2.4vw,34px); position: relative;">
+        <span aria-hidden="true" style="position: absolute; left: -4px; top: 11px; width: 7px; height: 7px; background: #14454C;"></span>
+        <h3 style="font-family: 'Bitter', Georgia, serif; font-weight: 600; font-size: clamp(24px,2.5vw,31px); line-height: 1.15; letter-spacing: -0.02em;">AiChat Pte Ltd</h3>
+        <p style="margin-top: 8px; font-size: 15px; color: #0F1518; font-weight: 500;">Full Stack Engineer</p>
+        <ul style="margin-top: 22px; display: flex; flex-direction: column; gap: 15px; max-width: 66ch;">
+          <li>Built backend services and APIs for the AiChat platform, an AI-powered marketing, sales, and customer-service suite operating across multiple chat channels.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article style="display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: flex-start; padding-top: clamp(40px,5vw,64px);">
+      <div style="flex: 0 1 170px; min-width: 140px;">
+        <p style="font-family: 'Bitter', Georgia, serif; font-size: 15px; font-weight: 500; letter-spacing: -0.01em;">Aug 2017 – Oct 2018</p>
+        <p style="font-size: 13px; color: #5B6569;">Jakarta</p>
+      </div>
+      <div style="flex: 1 1 460px; border-left: 1px solid #DCE0DF; padding-left: clamp(20px,2.4vw,34px); position: relative;">
+        <span aria-hidden="true" style="position: absolute; left: -4px; top: 11px; width: 7px; height: 7px; background: #14454C;"></span>
+        <h3 style="font-family: 'Bitter', Georgia, serif; font-weight: 600; font-size: clamp(24px,2.5vw,31px); line-height: 1.15; letter-spacing: -0.02em;">PT Masskredit Pasifica Raya</h3>
+        <p style="margin-top: 8px; font-size: 15px; color: #0F1518; font-weight: 500;">Lead Backend Developer</p>
+        <ul style="margin-top: 22px; display: flex; flex-direction: column; gap: 15px; max-width: 66ch;">
+          <li>Led backend development for a consumer lending platform, owning architecture and delivery across the full lifecycle.</li>
+        </ul>
+      </div>
+    </article>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 40px; align-items: flex-start; padding-top: clamp(32px,4vw,48px);">
+      <p style="flex: 0 1 170px; min-width: 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #5B6569;">Earlier</p>
+      <p style="flex: 1 1 460px; border-left: 1px solid #DCE0DF; padding-left: clamp(20px,2.4vw,34px); font-size: 14px; line-height: 1.6; color: #5B6569; max-width: 70ch;">Full Stack Engineer at PT Smooets Teknologi Outsourcing, Bandung (Jan 2016 – Jun 2017) and PT Satu Medika Indonesia, Bandung (Nov 2013 – Dec 2015).</p>
+    </div>
+  </div>
+</section>
+
+<section style="background: #EDF0EE; padding: clamp(48px,7vw,88px) clamp(20px,5vw,72px);">
+  <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 0;">
+    <div style="display: flex; flex-wrap: wrap; gap: 4px 40px; align-items: baseline; padding-bottom: 20px;">
+      <h2 style="flex: 0 1 170px; min-width: 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #5B6569;">Technical skills</h2>
+      <div style="flex: 1 1 460px;"></div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 4px 40px; padding: 16px 0; border-top: 1px solid #DCE0DF;">
+      <p style="flex: 0 1 170px; min-width: 140px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #0F1518;">Primary</p>
+      <p style="flex: 1 1 460px; font-size: 16px;">Java · Spring Boot · REST API design · third-party API integration · PostgreSQL · Redis</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 4px 40px; padding: 16px 0; border-top: 1px solid #DCE0DF;">
+      <p style="flex: 0 1 170px; min-width: 140px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #0F1518;">Also works with</p>
+      <p style="flex: 1 1 460px; font-size: 16px; color: #5B6569;">Go · TypeScript · JavaScript · Node.js · React · Solidity · MySQL</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 4px 40px; padding: 16px 0; border-top: 1px solid #DCE0DF;">
+      <p style="flex: 0 1 170px; min-width: 140px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #0F1518;">Infrastructure</p>
+      <p style="flex: 1 1 460px; font-size: 16px; color: #5B6569;">AWS · Git · CI/CD</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 4px 40px; padding: 16px 0; border-top: 1px solid #DCE0DF;">
+      <p style="flex: 0 1 170px; min-width: 140px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #0F1518;">AI-assisted development</p>
+      <p style="flex: 1 1 460px; font-size: 16px; color: #5B6569;">Claude Code — agentic workflows, task decomposition, reviewing generated code</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 4px 40px; padding: 16px 0; border-top: 1px solid #DCE0DF; border-bottom: 1px solid #DCE0DF;">
+      <p style="flex: 0 1 170px; min-width: 140px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #0F1518;">Languages</p>
+      <p style="flex: 1 1 460px; font-size: 16px; color: #5B6569;">English · Indonesian</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding: clamp(56px,8vw,104px) clamp(20px,5vw,72px);">
+  <div style="max-width: 1120px; margin: 0 auto;">
+    <div style="display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: flex-start;">
+      <h2 style="flex: 0 1 170px; min-width: 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #5B6569; padding-top: 4px;">Open source</h2>
+      <div style="flex: 1 1 460px; max-width: 62ch; display: flex; flex-direction: column; gap: 0;">
+        <p style="font-size: 15px; color: #5B6569; padding-bottom: 26px;">Side projects, most of them from earlier in my career. The languages here are not the ones I work in day to day.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #DCE0DF;">
+          <h3 style="flex: 0 1 190px; min-width: 150px; font-family: 'Bitter', Georgia, serif; font-size: 19px; font-weight: 500; letter-spacing: -0.01em;"><a href="https://github.com/rymanalu/loketh">Loketh</a></h3>
+          <div style="flex: 1 1 260px;">
+            <p style="font-size: 15px;">Event ticketing implemented as Ethereum smart contracts.</p>
+            <p style="font-size: 12px; letter-spacing: 0.11em; text-transform: uppercase; color: #5B6569; margin-top: 5px;">Solidity · JavaScript</p>
           </div>
-          <div class="col-md-8">
-            <p>
-              I’m a dedicated professional with 8+ years of web and software
-              development achievements for high-profile organizations.
-            </p>
-            <p>
-              I ensure clean, reusable code under strict deadlines and heavy
-              workloads. I also build lasting relationships and provide strong
-              project leadership. Using out-of-the-box thinking, I provide
-              creative solutions to complex, time-sensitive problems, ensuring
-              results exceed all expectations.
-            </p>
-            <p>
-              Supporting these achievements are my exemplary educational
-              qualifications. These include a Bachelor of Science in Computer,
-              Information Sciences, And Support Services from Universitas
-              Widyatama.
-            </p>
-            <p>Key areas of specialization:</p>
-            <p>
-              Full Stack Development / Web Applications / Software Development /
-              Project Management / Quality Code
-            </p>
-            <p>
-              Complex Problem-Solving / Leadership & Collaboration /
-              Communication / Reporting / Architectures
-            </p>
-            <p>
-              Client Support / Time Management / User Interaction / Process
-              Improvement / New Technologies & Software
-            </p>
-            <p>Selected highlights from my career:</p>
-            <p>
-              • Provided crucial input to the internal tool applications
-              lifecycles at FinAccel Pte Ltd, including extensive coding and
-              debugging. Wrote clean code and produced reusable
-              solutions/libraries despite challenges.
-            </p>
-            <p>
-              • Noted for vital contributions to applications lifecycles at
-              AiChat Pte Ltd, showcasing a superior work ethic across coding and
-              debugging. Wrote clean code and received the best possible
-              performance reviews.
-            </p>
-            <p>
-              • Improved methods to assess data, processes, and code to
-              troubleshoot problems and improve functionality throughout full
-              lifecycle software development. Ranked among the top of all
-              engineers/developers at Masskredit Pasifica Raya.
-            </p>
-            <p>
-              Programmed well-designed, testable, efficient code that was used
-              as a gold standard for software.
-            </p>
-            <p>In my free time, I enjoy reading and playing guitar.</p>
-            <p>I look forward to meeting you! You can reach me below.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #DCE0DF;">
+          <h3 style="flex: 0 1 190px; min-width: 150px; font-family: 'Bitter', Georgia, serif; font-size: 19px; font-weight: 500; letter-spacing: -0.01em;"><a href="https://github.com/rymanalu/laravel-simple-uploader">laravel-simple-uploader</a></h3>
+          <div style="flex: 1 1 260px;">
+            <p style="font-size: 15px;">File upload package for Laravel.</p>
+            <p style="font-size: 12px; letter-spacing: 0.11em; text-transform: uppercase; color: #5B6569; margin-top: 5px;">PHP · 55 stars</p>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="experience" class="background-alt">
-      <h2 class="heading">Experience</h2>
-      <div id="experience-timeline">
-        <div data-date="December 2022 - Present">
-          <h3>PT BFI Finance Indonesia, Tbk</h3>
-          <h4>Backend Engineer</h4>
-        </div>
-
-        <div data-date="March 2021 – December 2022">
-          <h3>FinAccel Pte Ltd</h3>
-          <h4>Full Stack Engineer</h4>
-        </div>
-
-        <div data-date="November 2018 – March 2021">
-          <h3>AiChat Pte Ltd</h3>
-          <h4>Full Stack Engineer</h4>
-        </div>
-
-        <div data-date="August 2017 – October 2018">
-          <h3>PT Masskredit Pasifica Raya</h3>
-          <h4>Lead Backend Developer</h4>
-        </div>
-
-        <div data-date="January 2016 – June 2017">
-          <h3>PT Smooets Teknologi Outsourcing</h3>
-          <h4>Full Stack Engineer</h4>
-        </div>
-
-        <div data-date="November 2013 – December 2015">
-          <h3>PT Satu Medika Indonesia</h3>
-          <h4>Full Stack Engineer</h4>
-        </div>
-      </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-      <h2 class="heading">Education</h2>
-
-      <div class="education-block">
-        <h3>Katapang Vocational School</h3>
-        <span class="education-date">June 2010 - June 2013</span>
-        <h4>Computer &amp; Network</h4>
-      </div>
-      <!-- End .education-block -->
-
-      <div class="education-block">
-        <h3>Widyatama University</h3>
-        <span class="education-date">August 2016 - Present</span>
-        <h4>Computer Science</h4>
-      </div>
-      <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="education">
-      <h2 class="heading">Certifications</h2>
-
-      <div class="education-block">
-        <h3>JavaScript: Understanding the Weird Parts</h3>
-        <span class="education-date">February 2017</span>
-        <h4>
-          <a href="http://ude.my/UC-6DLFFVWH" target="_blank">See credential</a>
-        </h4>
-      </div>
-      <!-- End .education-block -->
-
-      <div class="education-block">
-        <h3>Learn and Understand NodeJS</h3>
-        <span class="education-date">February 2017</span>
-        <h4>
-          <a href="http://ude.my/UC-34MLQA84" target="_blank">See credential</a>
-        </h4>
-      </div>
-      <!-- End .education-block -->
-
-      <div class="education-block">
-        <h3>Learn How To Code: Google’s Go (golang) Programming Language</h3>
-        <span class="education-date">June 2019</span>
-        <h4>
-          <a href="http://ude.my/UC-TL4VKWKH" target="_blank">See credential</a>
-        </h4>
-      </div>
-
-      <div class="education-block">
-        <h3>Web Development w/ Google’s Go (golang) Programming Language</h3>
-        <span class="education-date">August 2019</span>
-        <h4>
-          <a href="http://ude.my/UC-AKTZ7US4" target="_blank">See credential</a>
-        </h4>
-      </div>
-
-      <div class="education-block">
-        <h3>Build a Blockchain and a Cryptocurrency from Scratch</h3>
-        <span class="education-date">September 2020</span>
-        <h4>
-          <a
-            href="http://ude.my/UC-1750294c-c719-4f26-9c52-9c570389bb59"
-            target="_blank"
-            >See credential</a
-          >
-        </h4>
-      </div>
-
-      <div class="education-block">
-        <h3>Ethereum Blockchain Developer Bootcamp With Solidity (2020)</h3>
-        <span class="education-date">November 2020</span>
-        <h4>
-          <a
-            href="http://ude.my/UC-1a13f39a-c0d9-426b-87b7-79424db72796"
-            target="_blank"
-            >See credential</a
-          >
-        </h4>
-      </div>
-
-      <div class="education-block">
-        <h3>Understanding TypeScript - 2021 Edition</h3>
-        <span class="education-date">April 2021</span>
-        <h4>
-          <a
-            href="http://ude.my/UC-2482f3dc-102c-4b91-90e4-8b2f5526aeae"
-            target="_blank"
-            >See credential</a
-          >
-        </h4>
-      </div>
-      <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="skills">
-      <h2 class="heading">Skills</h2>
-      <ul>
-        <li>Node.js</li>
-        <li>TypeScript</li>
-        <li>React.js</li>
-        <li>Laravel</li>
-        <li>MySQL</li>
-        <li>Solidity</li>
-        <li>Redis</li>
-        <li>Git</li>
-        <li>AWS</li>
-        <li>Cassandra</li>
-        <li>JavaScript</li>
-        <li>PostgreSQL</li>
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-      <h2>Get in Touch</h2>
-      <div id="contact-form">
-        <form method="POST" action="https://formspree.io/rymanalu@gmail.com">
-          <input
-            type="hidden"
-            name="_subject"
-            value="Contact request from rymanalu.github.io"
-          />
-          <input
-            type="email"
-            name="_replyto"
-            placeholder="Your email"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your message"
-            required
-          ></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-      <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5 copyright">
-            <p>Copyright &copy; <span id="currentYear"></span> Roni Yusuf</p>
-          </div>
-          <div class="col-sm-2 top">
-            <span id="to-top">
-              <i class="fa fa-chevron-up" aria-hidden="true"></i>
-            </span>
-          </div>
-          <div class="col-sm-5 social">
-            <ul>
-              <li>
-                <a href="https://github.com/rymanalu" target="_blank"
-                  ><i class="fa fa-github" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/roni-yusuf/"
-                  target="_blank"
-                  ><i class="fa fa-linkedin" aria-hidden="true"></i
-                ></a>
-              </li>
-              <!--li>
-                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li-->
-            </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #DCE0DF; border-bottom: 1px solid #DCE0DF;">
+          <h3 style="flex: 0 1 190px; min-width: 150px; font-family: 'Bitter', Georgia, serif; font-size: 19px; font-weight: 500; letter-spacing: -0.01em;"><a href="https://github.com/rymanalu/factory-generator">factory-generator</a></h3>
+          <div style="flex: 1 1 260px;">
+            <p style="font-size: 15px;">Model factory generator for Laravel.</p>
+            <p style="font-size: 12px; letter-spacing: 0.11em; text-transform: uppercase; color: #5B6569; margin-top: 5px;">PHP · 17 stars</p>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- End footer -->
+    </div>
+  </div>
+</section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-    <script src="js/analytics.min.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $("#currentYear").append(new Date().getFullYear());
-      });
-    </script>
-  </body>
+<section style="padding: clamp(48px,7vw,88px) clamp(20px,5vw,72px) clamp(56px,8vw,96px); border-top: 1px solid #0F1518;">
+  <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: flex-start;">
+    <h2 style="flex: 0 1 170px; min-width: 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #5B6569; padding-top: 10px;">Contact</h2>
+    <div style="flex: 1 1 460px;">
+      <p style="font-family: 'Bitter', Georgia, serif; font-weight: 400; font-size: clamp(22px,2.8vw,34px); line-height: 1.3; letter-spacing: -0.015em; max-width: 26ch;">Email is the fastest way to reach me: <a href="mailto:rymanalu@gmail.com" style="text-decoration-thickness: 2px; text-decoration-color: #14454C;">rymanalu@gmail.com</a></p>
+      <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 15px;">
+        <a href="https://github.com/rymanalu">github.com/rymanalu</a>
+        <a href="https://www.linkedin.com/in/roni-yusuf">linkedin.com/in/roni-yusuf</a>
+        <a href="Roni%20Yusuf.pdf" download="Roni_Yusuf.pdf">Download resume (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</body>
 </html>
