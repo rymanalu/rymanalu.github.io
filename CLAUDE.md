@@ -5,86 +5,61 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 Personal portfolio site for Roni Yusuf, served by GitHub Pages as a user site at
-`https://rymanalu.github.io`. Built on Ryan Fitzgerald's `devportfolio-template` v1.2.2 (MIT).
+`https://rymanalu.github.io`.
 
-There is no CI, no `CNAME`, and no `.github/` directory — Pages serves the repo root of `master`
-verbatim, and all history lives on `master`. **Pushing to `master` is the deploy.**
+There is no CI, no build step, no `CNAME`, and no `.github/` directory — Pages serves the repo
+root of `master` verbatim, and all history lives on `master`. **Pushing to `master` is the
+deploy.** There are no tests, linters, formatters, or package manifests; nothing to install and
+nothing to run.
 
-## Generated files are committed, and they are what ships
+## The site is one self-contained file
 
-Because Pages runs no build step, every artifact the browser loads is checked in. `index.html`
-loads only generated or vendored files — never the sources:
+`index.html` is the entire site: markup, a small `<style>` block, and inline styles on every
+element. It has **no `<script>` tags at all** and loads exactly two things over the network —
+Google Fonts (Bitter + Libre Franklin) and nothing else. Editing it is the whole workflow; what
+you save is what ships.
 
-| Browser loads              | Source              | Built by                     |
-| -------------------------- | ------------------- | ---------------------------- |
-| `css/styles.css`           | `scss/styles.scss`  | `gulp styles`                |
-| `js/scripts.min.js`        | `js/scripts.js`     | `gulp scripts`               |
-| `js/analytics.min.js`      | `js/analytics.js`   | **nothing — hand-maintained** |
-| `css/bootstrap.min.css`    | —                   | vendored, do not edit        |
-| `libs/font-awesome/`       | —                   | vendored, do not edit        |
-| jQuery 1.12.4              | —                   | Google CDN, loaded first     |
+It has no `id` attributes and no in-page navigation, so there is nothing to keep in sync between
+a menu and its sections.
 
-Editing `scss/styles.scss` or `js/scripts.js` alone has **no effect on the live site** — the
-matching generated file must be rebuilt and committed alongside it.
+The page was generated from the Claude Design project **"rymanalu.github.io rebuild"**
+(`3857e527-86e7-42f3-a9c3-97385609e821`), which is the design source of truth. Substantial visual
+changes are best made there and re-imported via the `DesignSync` MCP tool (`get_file` on
+`index.html`); small copy edits are fine to make directly here. Re-importing overwrites the whole
+file, so re-apply the two local deviations listed below afterwards.
 
-`js/analytics.js` sits outside the gulp pipeline entirely (`gulpfile.js` wires up only
-`js/scripts.js` and `scss/styles.scss`). The two files are currently in sync — `analytics.min.js`
-is a faithful minification that inlines the tracker URL — but there is **no command that
-regenerates it**. Changing the GA snippet (currently property `UA-79154045-2`) means editing both
-files, minifying by hand or adding a gulp task for it.
+### Two deliberate deviations from the design source
 
-## Build commands
+Both will be silently reverted by a naive re-import — re-apply them:
 
-The lockfile is npm's `package-lock.json`. There are no tests, linters, or type checks.
+1. **The resume link is `href="Roni%20Yusuf.pdf"`, not `Roni_Yusuf.pdf`.** The file at the repo
+   root is `Roni Yusuf.pdf` — the space is load-bearing, because `/Roni Yusuf.pdf` is the URL
+   that has been public for years. The `download="Roni_Yusuf.pdf"` attribute gives visitors the
+   underscored filename anyway, so the encoded href costs nothing. Renaming the file would break
+   any existing external link for no user-visible gain.
+2. **`<link rel="icon" href="favicon.ico">` is added back**; the design omits it.
 
-```sh
-pnpm install            # or `npm ci`; pnpm also writes an untracked pnpm-lock.yaml
-pnpm run watch          # gulp watch — rebuilds either source on change
-pnpm exec gulp styles   # scss/styles.scss -> css/styles.css (compressed)
-pnpm exec gulp scripts  # js/scripts.js -> js/scripts.min.js (babel preset-env + uglify)
+## `favicon.ico` at the repo root is load-bearing beyond `index.html`
+
+`lot-calculator/index.html` requests **root-relative** `/favicon.ico`. Deleting or moving the
+root favicon breaks the sub-app's icon, not just the main page's. (`loketh/` uses its own
+`./favicon.ico` under its `<base href="/loketh/">` and is unaffected.)
+
+## Verifying a change
+
+There is no test suite, so verify visually and structurally. A headless Chromium ships with the
+Playwright browser cache at:
+
+```
+~/.cache/ms-playwright/chromium-1228/chrome-linux64/chrome
 ```
 
-**The three gulp commands do not currently run on modern Node — see below.** Only `pnpm install`
-succeeds.
-
-### The build does not run on modern Node
-
-`gulp-sass@4` depends on `node-sass@4.14.1`, whose prebuilt bindings stop at Node 14. Verified on
-Node 24 — installation appears to succeed (pnpm skips the native build script by default), then
-loading the module throws:
-
-```text
-Node Sass does not yet support your current environment: Linux 64-bit with Unsupported runtime (137)
-```
-
-`gulpfile.js` requires `gulp-sass` at the **top level**, so gulp cannot finish loading the gulpfile
-— **every task fails, not just `styles`.** The `scripts` task is pure JS (babel + uglify) and would
-work fine on its own; it is unreachable rather than broken. To run any build, pick one:
-
-- Run the build under Node 14 via nvm — smallest change, keeps the pipeline intact.
-- Migrate `gulp-sass`/`node-sass` to `sass` (dart-sass). The migration surface is small:
-  `scss/styles.scss` is a single self-contained 1001-line file with zero `@import`s, and the only
-  color functions used are `darken()`, `lighten()`, and `rgba()`.
-- Last resort, CSS only: hand-edit `css/styles.css` and mirror the change back into
-  `scss/styles.scss`. The two drift silently, so avoid this unless the change is trivial.
-  There is no equivalent escape hatch for JS — `js/scripts.min.js` has to be regenerated.
-
-## Editing site content
-
-All content is hand-authored HTML in `index.html` (364 lines, single page). The `#menu` list at
-the top drives in-page navigation; each entry must match a section `id` further down.
-
-The experience timeline is **data-driven at runtime**. Each direct child `<div data-date="...">`
-of `#experience-timeline` is wrapped by `js/scripts.js` into the
-`.vtimeline-point` / `.vtimeline-block` / `.vtimeline-content` structure, with `data-date` emitted
-as a `.vtimeline-date` span and a map-marker icon prepended. **Adding a job means adding one
-`data-date` div — no JS or CSS change is needed.**
-
-The resume is `Roni Yusuf.pdf` at the repo root, linked from the lead section as `/Roni Yusuf.pdf`.
-The space in the filename is load-bearing; renaming the file requires updating that link.
-
-Theme colors are SCSS variables near the top of `scss/styles.scss` (`$base-color`, `$background`,
-`$heading`, `$text`, …) — change them there, not in the compiled CSS.
+Screenshots via `--headless --screenshot` are fine for checking appearance. For anything that
+depends on **viewport width** — this page uses `clamp()` with `vw` units throughout — do not use
+`--window-size` below ~500px: Chrome floors the window at ~485px on Linux and silently reports
+that width instead, so narrow-viewport results are wrong rather than absent. Drive
+`Emulation.setDeviceMetricsOverride` over the DevTools Protocol instead. Node's global
+`WebSocket` is enough to do this with no packages installed.
 
 ## Sub-apps: `loketh/` and `lot-calculator/`
 
@@ -102,18 +77,16 @@ directory wholesale (this is what the "Update loketh" commits in the history are
 
 Neither app is linked from `index.html` — both are reached only by direct URL.
 
-## Known pre-existing defects
+## History: what used to be here
 
-Recorded so they aren't mistaken for new breakage. Fix only if asked.
+Through Aug 2026 the site was Ryan Fitzgerald's `devportfolio-template` v1.2.2, with a
+gulp + `node-sass` pipeline whose generated output (`css/styles.css`, `js/scripts.min.js`) was
+committed alongside its sources. The rebuild made all of it unreachable, so the pipeline
+(`gulpfile.js`, `package.json`, `scss/`), the generated and vendored assets (`css/`, `js/`,
+`libs/font-awesome/`), and the template's images were deleted. Nothing references them; do not
+resurrect them to make a styling change — edit `index.html` directly.
 
-- **The `#certifications` nav link is broken.** `#menu` links to `#certifications`, but no element
-  carries that id — the Certifications section reuses `id="education"`, so `index.html` has two
-  `id="education"` divs. The nav handler in `scripts.js` calls `$(heading).offset().top`, and
-  jQuery's `.offset()` returns `undefined` for an empty set, so clicking "Certifications" throws a
-  `TypeError` and scrolls nowhere. The fix is renaming the second `id="education"` (the one headed
-  "Certifications") to `id="certifications"`.
-- **Two competing year stamps.** `scripts.js` fills `#current-year`, which does not exist in the
-  markup. The footer's `#currentYear` is populated instead by a separate inline `<script>` at the
-  bottom of `index.html`.
-- **Dead project handlers.** `scripts.js` binds `#view-more-projects` and `#more-projects`; neither
-  exists in the markup. They are template leftovers — the site has no projects section.
+Google Analytics went with it. `js/analytics.min.js` carried a **Universal Analytics** property
+(`UA-79154045-2`); Google stopped processing data into UA properties in July 2023, so it had been
+sending beacons nowhere for years. The site now has **no analytics and no third-party scripts**.
+Adding measurement back means a fresh GA4 property, not restoring the old snippet.
