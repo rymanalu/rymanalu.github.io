@@ -39,6 +39,23 @@ Both will be silently reverted by a naive re-import — re-apply them:
    any existing external link for no user-visible gain.
 2. **`<link rel="icon" href="favicon.ico">` is added back**; the design omits it.
 
+## `Roni Yusuf.pdf` and `index.html` restate the same content independently — they drift
+
+The resume PDF's Professional Experience and Technical Skills sections and the homepage's
+Experience and Technical Skills sections describe the same underlying facts (job bullets, stack,
+infra list), but nothing generates one from the other — edits to one don't propagate. Observed
+2026-08-11: the homepage was missing a Kredivo bullet the PDF had always had, and the two
+disagreed on GCP vs AWS in the infra list.
+
+When either one changes content that overlaps the other, diff them. `git diff` won't show a text
+diff for the PDF (it's binary), so extract the prior committed blob and read both:
+
+```
+git show HEAD:"Roni Yusuf.pdf" > /tmp/old-resume.pdf
+```
+
+then `Read` both PDFs and compare their text against each other and against `index.html`.
+
 ## `favicon.ico` at the repo root is load-bearing beyond `index.html`
 
 `lot-calculator/index.html` requests **root-relative** `/favicon.ico`. Deleting or moving the
