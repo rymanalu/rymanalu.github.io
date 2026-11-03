@@ -78,6 +78,14 @@ that width instead, so narrow-viewport results are wrong rather than absent. Dri
 `Emulation.setDeviceMetricsOverride` over the DevTools Protocol instead. Node's global
 `WebSocket` is enough to do this with no packages installed.
 
+## Working on `master`
+
+- Commit and push straight to `master`; do not create feature branches or PRs here unless asked.
+  All history is on `master` and the push is the deploy.
+- `<file>:Zone.Identifier` files (WSL artifacts that appear beside files that came from Windows,
+  such as `Roni Yusuf.pdf`) show up as untracked. Delete them with `trash`; do not add a
+  `.gitignore` entry for them.
+
 ## Sub-apps: `loketh/` and `lot-calculator/`
 
 Both are **prebuilt Create React App bundles copied in from separate repos**. There is no source,
